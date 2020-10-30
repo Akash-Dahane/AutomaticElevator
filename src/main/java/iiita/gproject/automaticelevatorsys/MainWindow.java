@@ -52,7 +52,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jstatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iiita/gproject/automaticelevatorsys/lift.png"))); // NOI18N
-        jstatus.setText("Elevator Status");
+        jstatus.setText("Initaite Elevator");
         jstatus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jstatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,33 +83,33 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jconfig)
+                        .addGap(74, 74, 74)
+                        .addComponent(jstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63)
+                        .addComponent(Jlogs, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(328, 328, 328)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(368, 368, 368)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jconfig)
-                            .addComponent(Jlogs, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(442, 442, 442)
+                        .addGap(439, 439, 439)
                         .addComponent(jquit)))
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addGap(41, 41, 41)
-                .addComponent(jconfig)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(jstatus)
-                .addGap(18, 18, 18)
-                .addComponent(Jlogs)
-                .addGap(28, 28, 28)
+                .addGap(65, 65, 65)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jconfig)
+                    .addComponent(jstatus)
+                    .addComponent(Jlogs))
+                .addGap(75, 75, 75)
                 .addComponent(jquit)
-                .addGap(26, 26, 26))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         pack();
