@@ -43,7 +43,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
         jLabel1.setText("Available Options:");
 
-        jconfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iiita/gproject/automaticelevatorsys/config.png"))); // NOI18N
+        jconfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/config.png"))); // NOI18N
         jconfig.setText("Configure Threshold");
         jconfig.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,25 +51,23 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jstatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iiita/gproject/automaticelevatorsys/lift.png"))); // NOI18N
+        jstatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lift.png"))); // NOI18N
         jstatus.setText("Initaite Elevator");
-        jstatus.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jstatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jstatusActionPerformed(evt);
             }
         });
 
-        Jlogs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iiita/gproject/automaticelevatorsys/report.png"))); // NOI18N
+        Jlogs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/report.png"))); // NOI18N
         Jlogs.setText("Log Report");
-        Jlogs.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Jlogs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JlogsActionPerformed(evt);
             }
         });
 
-        jquit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iiita/gproject/automaticelevatorsys/quit.png"))); // NOI18N
+        jquit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quit.png"))); // NOI18N
         jquit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jquitActionPerformed(evt);
@@ -81,35 +79,35 @@ public class MainWindow extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jconfig)
-                        .addGap(74, 74, 74)
-                        .addComponent(jstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63)
-                        .addComponent(Jlogs, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(439, 439, 439)
-                        .addComponent(jquit)))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Jlogs, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(225, 225, 225)
+                            .addComponent(jquit))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(95, 95, 95)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jconfig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jconfig)
-                    .addComponent(jstatus)
-                    .addComponent(Jlogs))
-                .addGap(75, 75, 75)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jconfig)
+                .addGap(12, 12, 12)
+                .addComponent(jstatus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Jlogs)
+                .addGap(26, 26, 26)
                 .addComponent(jquit)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
