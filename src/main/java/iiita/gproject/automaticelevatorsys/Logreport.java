@@ -42,7 +42,7 @@ public class Logreport extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jTextPane1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Logs Panel");
 
         jLabel1.setFont(new java.awt.Font("FreeSans", 1, 24)); // NOI18N

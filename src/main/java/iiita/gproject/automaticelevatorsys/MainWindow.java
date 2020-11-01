@@ -115,8 +115,10 @@ public class MainWindow extends javax.swing.JFrame {
     ConfigureSys conf= new ConfigureSys();
     Initiate init= new Initiate();
     Logreport log= new Logreport();
+    FloorActions floact = new FloorActions();
     private void jstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jstatusActionPerformed
-        init.setVisible(true);        // TODO add your handling code here:
+        init.setVisible(true);  
+        floact.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jstatusActionPerformed
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
@@ -126,6 +128,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void jquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquitActionPerformed
         conf.dispose();
         init.dispose();
+        floact.dispose();
         log.dispose();
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jquitActionPerformed
