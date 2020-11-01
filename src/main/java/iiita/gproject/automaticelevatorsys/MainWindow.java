@@ -118,16 +118,15 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jstatusActionPerformed
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
-        new ConfigureSys().setVisible(true);
+        // TODO add your handling code here:
     }//GEN-LAST:event_jconfigActionPerformed
 
     private void jquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquitActionPerformed
-        System.exit(0);  
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_jquitActionPerformed
 
     private void JlogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JlogsActionPerformed
-        new Logreport().setVisible(true);
+        // TODO add your handling code here:
     }//GEN-LAST:event_JlogsActionPerformed
 
     /**
