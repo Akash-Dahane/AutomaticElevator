@@ -33,7 +33,7 @@ public class MainWindow extends javax.swing.JFrame {
         Jlogs = new javax.swing.JButton();
         jquit = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Automatic Elevator System");
         setBackground(new java.awt.Color(204, 255, 204));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -52,7 +52,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jstatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lift.png"))); // NOI18N
-        jstatus.setText("Initaite Elevator");
+        jstatus.setText("Initiate Elevator");
         jstatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jstatusActionPerformed(evt);
@@ -112,21 +112,26 @@ public class MainWindow extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    ConfigureSys conf= new ConfigureSys();
+    Initiate init= new Initiate();
+    Logreport log= new Logreport();
     private void jstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jstatusActionPerformed
-        // TODO add your handling code here:
+        init.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jstatusActionPerformed
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
-        // TODO add your handling code here:
+        conf.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jconfigActionPerformed
 
     private void jquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquitActionPerformed
-        // TODO add your handling code here:
+        conf.dispose();
+        init.dispose();
+        log.dispose();
+        this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jquitActionPerformed
 
     private void JlogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JlogsActionPerformed
-        // TODO add your handling code here:
+        log.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_JlogsActionPerformed
 
     /**
