@@ -112,29 +112,53 @@ public class MainWindow extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    ConfigureSys conf= new ConfigureSys();
-    Initiate init= new Initiate();
-    Logreport log= new Logreport();
-    FloorActions floact = new FloorActions();
+    
+    ConfigureSys conf;
+    Initiate init;
+    NumberTracker track;
+    LogRange log;
+    
     private void jstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jstatusActionPerformed
-        init.setVisible(true);  
-        floact.setVisible(true);// TODO add your handling code here:
+
+        /* if(init !=null)          // For showing just one state at a time .
+        init.dispose();
+        */
+        
+        init= new Initiate();
+        init.setVisible(true);      
+         
+        /*
+        if(track !=null)            // DO NOT REMOVE IT
+        track.dispose();
+        */
+        
+        track= new NumberTracker(init.idx,init.f);
+        track.setVisible(true);
+       
     }//GEN-LAST:event_jstatusActionPerformed
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
-        conf.setVisible(true);// TODO add your handling code here:
+        /*
+        if(conf !=null)            // DO NOT REMOVE IT
+        conf.dispose();
+        */
+        
+        conf= new ConfigureSys("8", "700");
+        conf.setVisible(true);
     }//GEN-LAST:event_jconfigActionPerformed
 
     private void jquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquitActionPerformed
-        conf.dispose();
-        init.dispose();
-        floact.dispose();
-        log.dispose();
-        this.dispose();// TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jquitActionPerformed
 
     private void JlogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JlogsActionPerformed
-        log.setVisible(true);// TODO add your handling code here:
+        /*
+        if(log !=null)              // DO NOT REMOVE IT
+        log.dispose();
+        */
+        
+        log= new LogRange();
+        log.setVisible(true);
     }//GEN-LAST:event_JlogsActionPerformed
 
     /**
