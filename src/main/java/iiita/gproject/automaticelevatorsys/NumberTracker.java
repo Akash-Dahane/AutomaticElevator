@@ -59,7 +59,7 @@ public class NumberTracker extends javax.swing.JFrame {
         jLabel2.setText("People Entering :");
         
         enterLabel.setFont(new java.awt.Font("FreeSans", 0, 14)); // NOI18N
-        if(idx<=3)
+        if(idx<2)
         enterLabel.setText("--");
         else if(idx==4)
         enterLabel.setText("0");
@@ -70,7 +70,7 @@ public class NumberTracker extends javax.swing.JFrame {
         jLabel5.setText("People Exiting :");
         
         exitLabel.setFont(new java.awt.Font("FreeSans", 0, 14)); // NOI18N
-        if(idx<=3)
+        if(idx<2)
         exitLabel.setText("--");
         else
         exitLabel.setText(Integer.toString(exitVar));
