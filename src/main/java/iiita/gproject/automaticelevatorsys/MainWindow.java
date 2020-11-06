@@ -120,12 +120,12 @@ public class MainWindow extends javax.swing.JFrame {
     
     private void jstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jstatusActionPerformed
 
-        /* if(init !=null)          // For showing just one state at a time .
+        /*if(init !=null)          // For showing just one state at a time .
         init.dispose();
         */
         
         init= new Initiate();
-        init.setVisible(true);      
+        init.setVisible(true);    
          
         /*
         if(track !=null)            // DO NOT REMOVE IT

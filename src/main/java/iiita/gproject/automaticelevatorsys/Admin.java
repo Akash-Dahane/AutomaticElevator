@@ -85,7 +85,7 @@ public class Admin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(33, 62, 77, 76);
         getContentPane().add(saveButton, gridBagConstraints);
 
-        maxWeight.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "550", "700", "850", "I000" }));
+        maxWeight.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "550", "700", "850", "I000" }));
         maxWeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 maxWeightActionPerformed(evt);
@@ -100,7 +100,7 @@ public class Admin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(13, 2, 0, 0);
         getContentPane().add(maxWeight, gridBagConstraints);
 
-        numPers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "04", "08", "10", "12", "14" }));
+        numPers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "04", "08", "10", "12", "14" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 1;
@@ -125,7 +125,10 @@ public class Admin extends javax.swing.JFrame {
         this.dispose();
         String wt=  maxWeight.getSelectedItem().toString();
         String num= numPers.getSelectedItem().toString();      // TODO add your handling code here:
-        new ConfigureSys(wt, num).setVisible(true); 
+        if(wt.equals("--") || num.equals("--"))
+        new Admin().setVisible(true);
+        else
+        new ConfigureSys(num, wt).setVisible(true); 
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void maxWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maxWeightActionPerformed

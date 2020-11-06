@@ -16,20 +16,20 @@ import javax.swing.JLabel;
 public class Initiate extends javax.swing.JFrame {
     public int idx,f,wt,n;    
     String[] doorStatus={
+        "Closed",
+        "Closed",
         "Opening",
         "Closing",
-        "Closed",
-        "Closed",
         "Opened",
         "Opened"
     };
     String[] overallStatus={
         "Lift Moving",
-        "Lift Moving",
-        "Lift Moving",
         "Power Drop",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
         "Lift Capacity Exceeded",
-        "People Exiting & Exiting"
+        "People Entering & Exiting"
     };
     /**
      * Creates new form Initiate
