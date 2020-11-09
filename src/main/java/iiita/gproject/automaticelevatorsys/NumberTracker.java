@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class NumberTracker extends javax.swing.JFrame {
 
-    int idx,f;
+    public int idx,f;
     /**
      * Creates new form NumberTracker
      */
@@ -30,7 +30,7 @@ public class NumberTracker extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
-    private void initComponents() {
+    public void initComponents() {
 
         curFloor = new javax.swing.JLabel();
         exitLabel = new javax.swing.JLabel();

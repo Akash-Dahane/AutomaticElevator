@@ -119,42 +119,22 @@ public class MainWindow extends javax.swing.JFrame {
     
     ConfigureSys conf;
     Initiate init;
-    NumberTracker track;
     LogRange log;
     
     private void jstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jstatusActionPerformed
 
-        /*if(init !=null)          // For showing just one state at a time .
-        init.dispose();
-        */
-        
         init= new Initiate();
         init.setVisible(true);    
          
-        /*
-        if(track !=null)            // DO NOT REMOVE IT
-        track.dispose();
-        */
-        
-        track= new NumberTracker(init.idx,init.f);
-        track.setVisible(true);
-        
         try {
             Logs logs = new Logs(init);
         } catch (IOException ex) {
             Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
     }//GEN-LAST:event_jstatusActionPerformed
 
-
-
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
-        /*
-        if(conf !=null)            // DO NOT REMOVE IT
-        conf.dispose();
-        */
-        
+
         conf= new ConfigureSys("8", "700");
         conf.setVisible(true);
     }//GEN-LAST:event_jconfigActionPerformed
@@ -164,10 +144,6 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jquitActionPerformed
 
     private void JlogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JlogsActionPerformed
-        /*
-        if(log !=null)              // DO NOT REMOVE IT
-        log.dispose();
-        */
         
         log= new LogRange();
         log.setVisible(true);
