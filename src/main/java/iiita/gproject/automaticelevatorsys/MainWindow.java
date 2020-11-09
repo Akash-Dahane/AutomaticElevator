@@ -5,6 +5,10 @@
  */
 package iiita.gproject.automaticelevatorsys;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author bluelord
@@ -134,8 +138,16 @@ public class MainWindow extends javax.swing.JFrame {
         
         track= new NumberTracker(init.idx,init.f);
         track.setVisible(true);
+        
+        try {
+            Logs logs = new Logs(init);
+        } catch (IOException ex) {
+            Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
     }//GEN-LAST:event_jstatusActionPerformed
+
+
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
         /*
@@ -190,6 +202,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainWindow().setVisible(true);
             }

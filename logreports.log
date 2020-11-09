@@ -1,0 +1,114 @@
+Nov 09, 2020 7:25:37 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 510
+Number of People in lift:10
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 09, 2020 7:26:11 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 318
+Number of People in lift:6
+Floor no:3
+Overall Status:Lift Moving
+Nov 09, 2020 7:26:15 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 70
+Number of People in lift:1
+Floor no:3
+Overall Status:Lift Moving
+Nov 09, 2020 7:26:18 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 56
+Number of People in lift:1
+Floor no:1
+Overall Status:Lift Moving
+Nov 09, 2020 7:26:21 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 586
+Number of People in lift:11
+Floor no:0
+Overall Status:Power Drop
+Nov 09, 2020 7:26:25 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 195
+Number of People in lift:3
+Floor no:4
+Overall Status:Lift Moving
+Nov 09, 2020 7:26:28 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 579
+Number of People in lift:11
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 09, 2020 8:11:31 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 524
+Number of People in lift:10
+Floor no:4
+Overall Status:Lift Capacity Exceeded
+Nov 09, 2020 8:11:37 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 280
+Number of People in lift:5
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 09, 2020 8:11:47 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 529
+Number of People in lift:10
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 09, 2020 8:15:02 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 153
+Number of People in lift:3
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 09, 2020 8:15:29 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 333
+Number of People in lift:6
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 09, 2020 8:15:53 PM iiita.gproject.automaticelevatorsys.Logs main
+INFO: 
+Weight in lift: 526
+Number of People in lift:10
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 09, 2020 8:35:22 PM iiita.gproject.automaticelevatorsys.Logs <init>
+INFO: 
+Weight in lift: {0}
+Number of People in lift:{1}
+Floor no:{2}
+Overall Status:{3}
+Nov 09, 2020 8:39:35 PM iiita.gproject.automaticelevatorsys.Logs <init>
+INFO: 
+Weight in lift:490
+Number of people:9
+Floor no:0
+Overall Status:Lift Moving
+Nov 09, 2020 8:42:09 PM iiita.gproject.automaticelevatorsys.Logs <init>
+INFO: 
+Weight in lift:357
+Number of people:7
+Floor no:3
+Overall Status:Lift Moving
+Nov 09, 2020 8:42:35 PM iiita.gproject.automaticelevatorsys.Logs <init>
+INFO: 
+Weight in lift:229
+Number of people:4
+Floor no:2
+Overall Status:Lift Moving
+Nov 09, 2020 8:42:48 PM iiita.gproject.automaticelevatorsys.Logs <init>
+INFO: 
+Weight in lift:383
+Number of people:7
+Floor no:4
+Overall Status:Lift Moving
+Nov 09, 2020 8:43:02 PM iiita.gproject.automaticelevatorsys.Logs <init>
+INFO: 
+Weight in lift:492
+Number of people:9
+Floor no:4
+Overall Status:Lift Moving
