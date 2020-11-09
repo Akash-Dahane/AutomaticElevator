@@ -5,9 +5,13 @@
  */
 package iiita.gproject.automaticelevatorsys;
 
+import java.io.IOException;
 import java.util.Random;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  *
@@ -159,8 +163,10 @@ public class Initiate extends javax.swing.JFrame {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -191,6 +197,8 @@ public class Initiate extends javax.swing.JFrame {
         }
         });*/
     }
+   
+    
 
     // Variables declaration - do not modify                     
     private javax.swing.JLabel doorLabel;
@@ -202,7 +210,7 @@ public class Initiate extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel peopleLabel;
-    private javax.swing.JLabel statLabel;
+    public javax.swing.JLabel statLabel;
     private javax.swing.JLabel weightLabel;
     // End of variables declaration                   
 }
