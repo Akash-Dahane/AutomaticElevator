@@ -14,6 +14,8 @@ public class ConfigureSys extends javax.swing.JFrame {
     String weight, maxPeople;
     /**
      * Creates new form Elevatorstatus
+     * @param a
+     * @param b
      */
     public ConfigureSys(String a, String b) {
         weight= a;

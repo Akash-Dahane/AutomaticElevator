@@ -123,14 +123,14 @@ public class MainWindow extends javax.swing.JFrame {
     
     private void jstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jstatusActionPerformed
 
-        init= new Initiate();
-        init.setVisible(true);    
-         
         try {
-            Logs logs = new Logs(init);
+            init= new Initiate();
         } catch (IOException ex) {
             Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
         }
+        init.setVisible(true);    
+         
+  
     }//GEN-LAST:event_jstatusActionPerformed
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
