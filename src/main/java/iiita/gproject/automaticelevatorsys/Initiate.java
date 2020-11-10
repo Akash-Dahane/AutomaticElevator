@@ -45,7 +45,7 @@ public class Initiate extends javax.swing.JFrame {
     };
    
     
-    public Initiate() {
+    public Initiate() throws IOException {
         initComponents();
         track.setVisible(true);
         
@@ -53,7 +53,11 @@ public class Initiate extends javax.swing.JFrame {
         timer = new javax.swing.Timer(t, (ActionEvent e) -> {
             
             getContentPane().removeAll();
-            initComponents();
+            try {
+                initComponents();
+            } catch (IOException ex) {
+                Logger.getLogger(Initiate.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
             track.idx=idx;track.f=f;
             track.getContentPane().removeAll();
@@ -80,7 +84,7 @@ public class Initiate extends javax.swing.JFrame {
         f= rand(5);
         wt= rand(600);
     }
-    private void initComponents() {
+    private void initComponents() throws IOException {
      
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -181,6 +185,24 @@ public class Initiate extends javax.swing.JFrame {
         );
 
         pack();
+        try{
+            LogManager lm = LogManager.getLogManager();
+            String LoggerName = Logger.GLOBAL_LOGGER_NAME;
+            Logger logrep = lm.getLogger(LoggerName);
+            logrep.setLevel(Level.INFO);
+            logrep.setUseParentHandlers(false);
+
+            FileHandler fh = new FileHandler("logreports.log",0,1,true);
+            fh.setFormatter(new SimpleFormatter());
+            fh.setLevel(Level.INFO);
+            logrep.addHandler(fh);
+            logrep.log(Level.INFO, "\nWeight in lift:{0}\nNumber of people:{1}\nFloor no:{2}\nOverall Status:{3}", new Object[]{wt, n, f, statLabel.getText()});
+            fh.flush();
+            fh.close();
+        }
+        catch(IOException e){
+            System.err.println(e);
+        }
     }// </editor-fold>                        
 
     /**
