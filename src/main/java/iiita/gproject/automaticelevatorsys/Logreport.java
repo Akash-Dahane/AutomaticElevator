@@ -16,15 +16,9 @@ import java.io.InputStreamReader;
  */
 public class Logreport extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Logreport
-     */
- 
     public Logreport() {
         initComponents();
-        
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -135,7 +129,6 @@ public class Logreport extends javax.swing.JFrame {
                 jTextArea3.append(strLine+"\n");
             }
             fstream.close();
-            
         }
         catch ( IOException e){
             System.err.println(e.getLocalizedMessage());
@@ -195,9 +188,9 @@ public class Logreport extends javax.swing.JFrame {
         */
          
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
+        /*java.awt.EventQueue.invokeLater(() -> {
             new Logreport().setVisible(true);
-        });
+        });*/
         
     }
 

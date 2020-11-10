@@ -496,3 +496,393 @@ Weight in lift:536
 Number of people:10
 Floor no:2
 Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 4:15:04 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:113
+Number of people:2
+Floor no:1
+Overall Status:Power Drop
+Nov 10, 2020 4:15:07 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:57
+Number of people:1
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 4:15:10 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:376
+Number of people:7
+Floor no:1
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 4:15:13 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:36
+Number of people:1
+Floor no:3
+Overall Status:Lift Moving
+Nov 10, 2020 4:15:16 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:72
+Number of people:1
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 4:15:19 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:206
+Number of people:4
+Floor no:1
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 4:15:22 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:381
+Number of people:7
+Floor no:2
+Overall Status:Power Drop
+Nov 10, 2020 5:28:06 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:102
+Number of people:2
+Floor no:0
+Overall Status:Lift Moving
+Nov 10, 2020 5:28:09 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:580
+Number of people:11
+Floor no:1
+Overall Status:Lift Moving
+Nov 10, 2020 5:28:12 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:113
+Number of people:2
+Floor no:0
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 5:28:15 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:458
+Number of people:9
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 5:28:18 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:15
+Number of people:1
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 5:28:21 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:146
+Number of people:2
+Floor no:3
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 5:28:24 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:432
+Number of people:8
+Floor no:3
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 5:28:27 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:485
+Number of people:9
+Floor no:0
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 5:28:41 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:171
+Number of people:3
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 5:28:44 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:154
+Number of people:3
+Floor no:3
+Overall Status:Lift Moving
+Nov 10, 2020 5:28:47 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:474
+Number of people:9
+Floor no:3
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 5:28:50 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:279
+Number of people:5
+Floor no:4
+Overall Status:Lift Moving
+Nov 10, 2020 5:28:53 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:77
+Number of people:1
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 10, 2020 5:28:56 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:144
+Number of people:2
+Floor no:4
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 5:28:59 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:466
+Number of people:9
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 10, 2020 5:29:02 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:591
+Number of people:11
+Floor no:0
+Overall Status:Lift Moving
+Nov 10, 2020 6:36:37 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:187
+Number of people:3
+Floor no:3
+Overall Status:Power Drop
+Nov 10, 2020 6:44:25 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:403
+Number of people:8
+Floor no:1
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:44:28 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:471
+Number of people:9
+Floor no:4
+Overall Status:Power Drop
+Nov 10, 2020 6:44:31 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:281
+Number of people:5
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:46:52 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:404
+Number of people:8
+Floor no:4
+Overall Status:Power Drop
+Nov 10, 2020 6:46:55 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:82
+Number of people:1
+Floor no:2
+Overall Status:Power Drop
+Nov 10, 2020 6:46:58 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:308
+Number of people:6
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:47:01 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:539
+Number of people:10
+Floor no:0
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:47:04 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:245
+Number of people:4
+Floor no:3
+Overall Status:Power Drop
+Nov 10, 2020 6:47:07 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:197
+Number of people:3
+Floor no:1
+Overall Status:Power Drop
+Nov 10, 2020 6:50:28 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:205
+Number of people:4
+Floor no:1
+Overall Status:Lift Moving
+Nov 10, 2020 6:50:31 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:521
+Number of people:10
+Floor no:4
+Overall Status:Lift Moving
+Nov 10, 2020 6:50:34 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:436
+Number of people:8
+Floor no:2
+Overall Status:Power Drop
+Nov 10, 2020 6:50:37 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:59
+Number of people:1
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:50:40 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:103
+Number of people:2
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:50:43 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:563
+Number of people:11
+Floor no:4
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:50:46 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:338
+Number of people:6
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:50:49 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:478
+Number of people:9
+Floor no:4
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:50:52 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:100
+Number of people:2
+Floor no:3
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:50:55 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:576
+Number of people:11
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:50:58 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:15
+Number of people:1
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:52:03 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:383
+Number of people:7
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:53:59 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:34
+Number of people:1
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:54:02 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:371
+Number of people:7
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:55:47 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:188
+Number of people:3
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:56:12 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:162
+Number of people:3
+Floor no:2
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:56:15 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:91
+Number of people:1
+Floor no:1
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:56:18 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:66
+Number of people:1
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:56:21 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:560
+Number of people:11
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:56:41 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:453
+Number of people:9
+Floor no:4
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:56:44 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:299
+Number of people:5
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:57:12 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:141
+Number of people:2
+Floor no:2
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:57:15 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:462
+Number of people:9
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:57:33 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:89
+Number of people:1
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:57:36 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:426
+Number of people:8
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:57:39 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:213
+Number of people:4
+Floor no:3
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:57:42 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:26
+Number of people:1
+Floor no:1
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:58:09 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:553
+Number of people:11
+Floor no:0
+Overall Status:People Entering & Exiting
+Nov 10, 2020 6:58:12 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:497
+Number of people:9
+Floor no:2
+Overall Status:Lift Capacity Exceeded
+Nov 10, 2020 6:58:15 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:424
+Number of people:8
+Floor no:3
+Overall Status:Power Drop
+Nov 10, 2020 6:58:18 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:563
+Number of people:11
+Floor no:3
+Overall Status:Power Drop
+Nov 10, 2020 6:58:21 PM iiita.gproject.automaticelevatorsys.Initiate initComponents
+INFO: 
+Weight in lift:13
+Number of people:1
+Floor no:4
+Overall Status:Lift Capacity Exceeded
