@@ -26,6 +26,7 @@ public class Initiate extends javax.swing.JFrame {
     
     public int idx,f,wt,n,cnt=0;   
     public final static int t = 3000;
+    private int flag=0;
     NumberTracker track= new NumberTracker(idx,f);
     String[] doorStatus={
         "Closed",
@@ -52,6 +53,10 @@ public class Initiate extends javax.swing.JFrame {
         javax.swing.Timer timer;
         timer = new javax.swing.Timer(t, (ActionEvent e) -> {
             
+            if(flag==1)
+            {
+                ((Timer)e.getSource()).stop();
+            }
             getContentPane().removeAll();
             try {
                 initComponents();
@@ -97,8 +102,9 @@ public class Initiate extends javax.swing.JFrame {
         peopleLabel = new javax.swing.JLabel();
         floorLabel = new javax.swing.JLabel();
         statLabel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Automatic Lift");
         
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -130,6 +136,14 @@ public class Initiate extends javax.swing.JFrame {
 
         statLabel.setText(overallStatus[idx]);
         
+        jButton1.setText("Quit");
+        
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -154,7 +168,11 @@ public class Initiate extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(123, 123, 123)
                         .addComponent(jLabel1)))
-                .addContainerGap(184, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(jButton1))
+                .addContainerGap(64, Short.MAX_VALUE)
+            )       
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,7 +199,11 @@ public class Initiate extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(statLabel))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(jButton1)
+                .addContainerGap(79, Short.MAX_VALUE)
+            )
+                
         );
 
         pack();
@@ -204,7 +226,11 @@ public class Initiate extends javax.swing.JFrame {
             System.err.println(e);
         }
     }// </editor-fold>                        
-
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        flag=1;
+        this.dispose();
+        track.dispose();
+    }
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
@@ -244,7 +270,8 @@ public class Initiate extends javax.swing.JFrame {
    
     
 
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel doorLabel;
     private javax.swing.JLabel floorLabel;
     private javax.swing.JLabel jLabel1;

@@ -40,7 +40,7 @@ public class NumberTracker extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         floorLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         
         int enterVar = new Random().nextInt(5);
         int exitVar = new Random().nextInt(5);
