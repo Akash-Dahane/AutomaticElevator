@@ -9,15 +9,47 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
  * @author bluelord
  */
 public class Logreport extends javax.swing.JFrame {
-
-    public Logreport() {
+    String regstart;
+    String regend;
+    public Logreport(String Regstart, String Regend) {
+        regstart = Regstart;
+        //System.out.println(regstart);
+        regend = Regend;
         initComponents();
+        jTextArea3.setText("Sorry.No logs available for given timerange.\n");
+        try{
+            boolean flag =false;
+            FileInputStream fstream = new FileInputStream("logreports.log");
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            String line;
+            while((line = br.readLine()) != null){
+                //jTextArea3.append(line+"\n");
+                if(filtertest(regend,line))
+		    break; // break if we get end time and thus stop displaying.
+                if(flag==false){
+		    if(filtertest(regstart,line)){
+			flag=true; // flag set because we don't want to check start anymore now
+			jTextArea3.append(line+"\n");
+		    }
+                }
+                else{
+		    jTextArea3.append(line+"\n");
+                }
+
+            }
+            fstream.close();
+        }
+        catch ( Exception e){
+            System.err.println(e.getLocalizedMessage());
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,6 +72,8 @@ public class Logreport extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -70,12 +104,26 @@ public class Logreport extends javax.swing.JFrame {
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jScrollPane4.setViewportView(jTextArea3);
-        jTextArea3.getAccessibleContext().setAccessibleParent(null);
 
-        jButton2.setText("Clear and Start");
+        jButton2.setText("Clear");
+        jButton2.setActionCommand("Clear and exit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Remove Time Filter");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Exit");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -89,15 +137,18 @@ public class Logreport extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(188, 188, 188)
-                                .addComponent(jButton2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(143, 143, 143)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 151, Short.MAX_VALUE)))
+                        .addGap(143, 143, 143)
+                        .addComponent(jLabel1)
+                        .addGap(0, 313, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(95, 95, 95)
+                .addComponent(jButton4)
+                .addGap(109, 109, 109))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,7 +158,10 @@ public class Logreport extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -118,22 +172,46 @@ public class Logreport extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /**
+     *
+     * @param regx
+     * @param line
+     * @return
+     */
+    public static boolean filtertest(String regx, String line){
+	       Pattern pt = Pattern.compile(regx);
+	       Matcher mt = pt.matcher(line);
+	       return mt.find();
+       }
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
                         // TODO add your handling code here:
         jTextArea3.setText("");
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try{
+            boolean flag =false;
             FileInputStream fstream = new FileInputStream("logreports.log");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-            String strLine;
-            while((strLine = br.readLine()) != null){
-                jTextArea3.append(strLine+"\n");
+            String line;
+            jTextArea3.setText("");
+            while((line = br.readLine()) != null){
+                jTextArea3.append(line+"\n");
             }
             fstream.close();
         }
-        catch ( IOException e){
+        catch ( Exception e){
             System.err.println(e.getLocalizedMessage());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,6 +275,8 @@ public class Logreport extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
