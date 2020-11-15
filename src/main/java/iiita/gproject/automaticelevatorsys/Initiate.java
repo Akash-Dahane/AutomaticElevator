@@ -31,18 +31,35 @@ public class Initiate extends javax.swing.JFrame {
     String[] doorStatus={
         "Closed",
         "Closed",
+        "Closed",
+        "Opening",
+        "Opening",
         "Opening",
         "Closing",
         "Opened",
-        "Opened"
+        "Closing",
+        "Opened",
+        "Closing",
+        "Opened",
+        "Closed",
+        "Opened",
+        
     };
     String[] overallStatus={
         "Lift Moving",
+        "Lift Moving",
+        "Lift Moving",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
+        "People Entering & Exiting",
         "Power Drop",
-        "People Entering & Exiting",
-        "People Entering & Exiting",
         "Lift Capacity Exceeded",
-        "People Entering & Exiting"
     };
    
     
@@ -87,7 +104,10 @@ public class Initiate extends javax.swing.JFrame {
     public void precomp() {
         idx= rand(doorStatus.length);
         f= rand(5);
+        if(idx<13)
         wt= rand(600);
+        else
+        wt= (int)(Math.random() * (900 - 700 + 1) + 700);
     }
     private void initComponents() throws IOException {
      
@@ -137,7 +157,7 @@ public class Initiate extends javax.swing.JFrame {
         statLabel.setText(overallStatus[idx]);
         
         jButton1.setText("Quit");
-        
+       
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
