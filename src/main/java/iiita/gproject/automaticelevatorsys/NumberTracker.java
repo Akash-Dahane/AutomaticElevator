@@ -15,6 +15,8 @@ public class NumberTracker extends javax.swing.JFrame {
     public int idx,f;
     /**
      * Creates new form NumberTracker
+     * @param a
+     * @param b
      */
     public NumberTracker(int a,int b) {
         idx=a;

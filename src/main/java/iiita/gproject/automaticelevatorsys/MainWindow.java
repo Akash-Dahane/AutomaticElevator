@@ -65,6 +65,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         Jlogs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/report.png"))); // NOI18N
         Jlogs.setText("Log Report");
+        Jlogs.setVerifyInputWhenFocusTarget(false);
         Jlogs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JlogsActionPerformed(evt);
