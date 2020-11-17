@@ -17,6 +17,7 @@ public class ConfigureSys extends javax.swing.JFrame {
      * @param a
      * @param b
      */
+    
     public ConfigureSys(String a, String b) {
         weight= a;
         maxPeople=b;
@@ -43,6 +44,7 @@ public class ConfigureSys extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         adminLabel = new javax.swing.JButton();
+        
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -52,7 +54,7 @@ public class ConfigureSys extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Config Panel");
         getContentPane().setLayout(new java.awt.GridBagLayout());
 

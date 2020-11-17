@@ -18,6 +18,7 @@ public class MainWindow extends javax.swing.JFrame {
     /**
      * Creates new form MainWindow
      */
+    public boolean flag=false;
     public MainWindow() {
         initComponents();
     }
@@ -134,8 +135,15 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
 
-        conf= new ConfigureSys("8", "700");
-        conf.setVisible(true);
+        if(flag == false){
+            conf= new ConfigureSys("8", "700");
+            conf.setVisible(true);
+            flag = true;
+            System.out.println("flag was false");
+        }
+        else
+            conf.setVisible(true);
+       
     }//GEN-LAST:event_jconfigActionPerformed
 
     private void jquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquitActionPerformed

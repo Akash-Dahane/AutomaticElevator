@@ -128,7 +128,7 @@ public class Admin extends javax.swing.JFrame {
         if(wt.equals("--") || num.equals("--"))
         new Admin().setVisible(true);
         else
-        new ConfigureSys(num, wt).setVisible(true); 
+        new ConfigureSys(num,wt).setVisible(true); 
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void maxWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maxWeightActionPerformed
