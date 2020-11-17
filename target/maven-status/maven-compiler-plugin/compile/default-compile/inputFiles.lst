@@ -5,4 +5,6 @@
 /home/bluelord/github/AutomaticElevator/src/main/java/iiita/gproject/automaticelevatorsys/Initiate.java
 /home/bluelord/github/AutomaticElevator/src/main/java/iiita/gproject/automaticelevatorsys/ConfigureSys.java
 /home/bluelord/github/AutomaticElevator/src/main/java/iiita/gproject/automaticelevatorsys/NumberTracker.java
+/home/bluelord/github/AutomaticElevator/src/main/java/iiita/gproject/automaticelevatorsys/SendEmail.java
+/home/bluelord/github/AutomaticElevator/src/main/java/iiita/gproject/automaticelevatorsys/Emailer.java
 /home/bluelord/github/AutomaticElevator/src/main/java/iiita/gproject/automaticelevatorsys/MainWindow.java

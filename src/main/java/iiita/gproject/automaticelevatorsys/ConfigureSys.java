@@ -5,6 +5,14 @@
  */
 package iiita.gproject.automaticelevatorsys;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  *
  * @author bluelord
@@ -18,9 +26,18 @@ public class ConfigureSys extends javax.swing.JFrame {
      * @param b
      */
     
-    public ConfigureSys(String a, String b) {
-        weight= a;
-        maxPeople=b;
+    public ConfigureSys() throws FileNotFoundException, IOException {
+        File wtfile = new File("wtfile");
+        File numfile = new File("numfile");
+        BufferedReader br = new BufferedReader(new InputStreamReader(new DataInputStream(new FileInputStream(wtfile))));
+		maxPeople = br.readLine();
+		br.close();
+
+        //maxPeople=b;
+        BufferedReader cr = new BufferedReader(new InputStreamReader(new DataInputStream(new FileInputStream(numfile))));
+		weight = cr.readLine();
+		br.close();
+
         initComponents();
     }
 
@@ -54,7 +71,7 @@ public class ConfigureSys extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Config Panel");
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
