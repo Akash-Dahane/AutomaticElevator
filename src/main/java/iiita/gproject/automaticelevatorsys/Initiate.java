@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import javax.mail.MessagingException;
 import javax.swing.Timer;
 import static jdk.vm.ci.common.InitTimer.timer;
 import static jdk.vm.ci.common.InitTimer.timer;
@@ -155,6 +156,10 @@ public class Initiate extends javax.swing.JFrame {
         floorLabel.setText(Integer.toString(f));
 
         statLabel.setText(overallStatus[idx]);
+        if("Power Drop".equals(statLabel.getText())){
+            SendEmail sendEmail = new SendEmail();
+        }
+        
         
         jButton1.setText("Quit");
        

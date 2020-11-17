@@ -5,6 +5,13 @@
  */
 package iiita.gproject.automaticelevatorsys;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author anshverma
@@ -124,11 +131,72 @@ public class Admin extends javax.swing.JFrame {
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         this.dispose();
         String wt=  maxWeight.getSelectedItem().toString();
-        String num= numPers.getSelectedItem().toString();      // TODO add your handling code here:
+        String num= numPers.getSelectedItem().toString();
+        File wtfile= new File("wtfile");
+        File numfile = new File("numfile");
+        if(wtfile.exists() == false){
+            try {
+                wtfile.createNewFile();
+                //System.out.println("new file created");
+            } catch (IOException ex) {
+                Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+            }
+	}
+			//System.out.println("file was already present");
+		/*file writing*/
+	BufferedWriter bf = null;
+        try {
+            bf = new BufferedWriter(new FileWriter(wtfile));
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            bf.write(wt);
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try{
+            bf.close();
+            
+        }catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if(numfile.exists() == false){
+            try {
+                numfile.createNewFile();
+                //System.out.println("new file created");
+            } catch (IOException ex) {
+                Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+            }
+	}
+			//System.out.println("file was already present");
+		/*file writing*/
+	BufferedWriter cf = null;
+        try {
+            cf = new BufferedWriter(new FileWriter(numfile));
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            cf.write(num);
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            cf.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //space for email change
         if(wt.equals("--") || num.equals("--"))
         new Admin().setVisible(true);
         else
-        new ConfigureSys(num, wt).setVisible(true); 
+        try {
+            new ConfigureSys().setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void maxWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maxWeightActionPerformed
@@ -151,22 +219,16 @@ public class Admin extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Admin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Admin().setVisible(true);
         });
     }
 

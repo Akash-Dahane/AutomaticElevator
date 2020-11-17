@@ -134,8 +134,13 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jconfigActionPerformed
 
-        conf= new ConfigureSys("8", "700");
-        conf.setVisible(true);
+        try {
+            conf= new ConfigureSys();
+        } catch (IOException ex) {
+            Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            conf.setVisible(true);
+       
     }//GEN-LAST:event_jconfigActionPerformed
 
     private void jquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquitActionPerformed
