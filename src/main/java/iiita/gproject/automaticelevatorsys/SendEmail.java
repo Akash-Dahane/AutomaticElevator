@@ -50,7 +50,7 @@ public class SendEmail {
         }
         //String recpt="iit2019176@iiita.ac.in"; //contact.akashdahane@gmail.com
         // TODO code application logic here
-        Emailer.emailer(recpt);
+        Email.emailer(recpt);
         //System.out.println("done");
     }
     /**
