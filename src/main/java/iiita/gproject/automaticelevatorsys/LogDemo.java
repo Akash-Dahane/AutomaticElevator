@@ -5,6 +5,9 @@
  */
 package iiita.gproject.automaticelevatorsys;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +22,41 @@ public class LogDemo extends javax.swing.JFrame {
     public LogDemo() {
         initComponents();
     }
-
+    public static boolean validate(String str){
+        //System.out.println(str);
+        SimpleDateFormat sf= new SimpleDateFormat("MMM dd, yyyy h:mm:ss a");
+        sf.setLenient(false);
+        try{
+            Date d = sf.parse(str);
+        }catch(ParseException e){
+            return false;
+        }
+        return true;
+    }
+    public static boolean checker(String str,String str2){//commented code were used for testing purpose
+        //System.out.println("i was caled");
+        SimpleDateFormat sf= new SimpleDateFormat("MMM dd, yyyy h:mm:ss a");
+        //sf.setLenient(false);
+        Date d1 = null,d2 = null;
+        try{
+            d1 = sf.parse(str);
+            //System.out.println(d1);
+            d2 = sf.parse(str2);
+            
+            
+        }catch(ParseException e){
+            System.err.println(e);
+        }
+        //.out.println(d2);
+        if((d1.compareTo(d2)) == 0){
+            //System.out.println(x);
+            return true;
+        }
+        if(d1.compareTo(d2) > 0)
+            return true;
+        else
+            return false;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,6 +66,7 @@ public class LogDemo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField5 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -42,6 +80,21 @@ public class LogDemo extends javax.swing.JFrame {
         ToHH = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        Fmm = new javax.swing.JTextField();
+        Tmm = new javax.swing.JTextField();
+        Fss = new javax.swing.JTextField();
+        Tss = new javax.swing.JTextField();
+        datemm = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        datedd = new javax.swing.JTextField();
+        dateyy = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+
+        jTextField5.setText("jTextField5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -61,7 +114,7 @@ public class LogDemo extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(190, 190, 190)
                 .addComponent(jLabel1)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,73 +147,159 @@ public class LogDemo extends javax.swing.JFrame {
             }
         });
 
+        FromHH.setText("3");
+
+        ToHH.setText("10");
+
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel5.setText("HH");
+        jLabel5.setText("H");
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 102, 102));
         jLabel6.setText("AM/PM");
+
+        Fmm.setText("23");
+
+        Tmm.setText("19");
+
+        Fss.setText("12");
+
+        Tss.setText("22");
+
+        datemm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" }));
+        datemm.setSelectedIndex(10);
+
+        jLabel7.setText("Date :");
+
+        datedd.setText("18");
+
+        dateyy.setText("2020");
+
+        jLabel8.setText("MM");
+
+        jLabel9.setText("SS");
+
+        jLabel10.setText("[ eg: JAN 28 2020 ]");
+
+        jLabel11.setText("[ eg: 3:34:05 AM]");
+
+        jLabel12.setText("Valid inputs");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(67, 67, 67))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel2))
+                        .addComponent(jLabel2)
+                        .addGap(81, 81, 81)
+                        .addComponent(jLabel12)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
+                        .addGap(38, 38, 38)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(FromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ToHH, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(Fmm, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                                            .addComponent(Tmm)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(datemm, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(36, 36, 36)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel8)
+                                            .addComponent(datedd, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dateyy, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(Tss, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                                            .addComponent(Fss))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel11)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(ToHH, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                                    .addComponent(FromHH))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel9)
+                                .addGap(84, 84, 84)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(FromList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jLabel5)
-                                .addGap(41, 41, 41)
-                                .addComponent(jLabel6)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel6)
+                                    .addComponent(ToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(51, 51, 51)))))
+                .addGap(96, 96, 96))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(57, 57, 57))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(36, 36, 36)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(FromList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FromHH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(ToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ToHH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(68, 68, 68))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(datedd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(datemm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dateyy, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(FromHH, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Fmm)
+                            .addComponent(FromList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Fss, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ToHH)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Tss, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tmm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(ToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel11)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,26 +318,40 @@ public class LogDemo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        if(FromHH.getText().isEmpty()||ToHH.getText().isEmpty()){
+            String dd= datedd.getText().trim();
+            String dy= dateyy.getText().trim();
+            String dm= datemm.getSelectedItem().toString();
+            
+            String Fh= FromHH.getText().trim();
+            String Fm= Fmm.getText().trim();
+            String Fs= Fss.getText().trim();
+            String fam = FromList.getSelectedItem().toString();
+            
+            String Th= ToHH.getText().trim();
+            String Tm= Tmm.getText().trim();
+            String Ts= Tss.getText().trim();
+            String Tam = ToList.getSelectedItem().toString();
+            
+            String ftime =dm+" "+dd+","+" "+dy+" "+Fh+":"+Fm+":"+Fs+" "+fam;
+            String ttime =dm+" "+dd+","+" "+dy+" "+Th+":"+Tm+":"+Ts+" "+Tam; 
+        if(datedd.getText().isEmpty()||dateyy.getText().isEmpty()||FromHH.getText().isEmpty()||ToHH.getText().isEmpty()||Fss.getText().isEmpty()||Tss.getText().isEmpty()||Fmm.getText().isEmpty()||Tmm.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Enter all fields!");
         }
-
-        else if(!(FromHH.getText().matches("^([1-9]|1[0-2])$") && ToHH.getText().matches("^([1-9]|1[0-2])$"))){
-            JOptionPane.showMessageDialog(null, "Enter valid time.\nHH In range 01 to 12");
+        else if(!(validate(ftime) && validate(ttime))){
+            JOptionPane.showMessageDialog(null, "Enter valid date and time!");
+              
+        }
+        else if(checker(ftime,ttime)){
+            JOptionPane.showMessageDialog(null, "From time should be smaller than To time.");
         }
         else{
-            String fh = FromHH.getText().trim();
-            String fl = FromList.getSelectedItem().toString();
-            String th = ToHH.getText().trim();
-            String tl = ToList.getSelectedItem().toString();
-            String startreg= fh+":"+".*"+":"+".*"+fl;
-            String endreg= th+":"+".*"+":"+".*"+tl;
-            new Logreport(startreg,endreg).setVisible(true);
+            new Logreport(ftime,ttime).setVisible(true);
             this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -236,18 +389,32 @@ public class LogDemo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Fmm;
     private javax.swing.JTextField FromHH;
     private javax.swing.JComboBox<String> FromList;
+    private javax.swing.JTextField Fss;
+    private javax.swing.JTextField Tmm;
     private javax.swing.JTextField ToHH;
     private javax.swing.JComboBox<String> ToList;
+    private javax.swing.JTextField Tss;
+    private javax.swing.JTextField datedd;
+    private javax.swing.JComboBox<String> datemm;
+    private javax.swing.JTextField dateyy;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

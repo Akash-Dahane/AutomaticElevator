@@ -5,14 +5,9 @@
  */
 package iiita.gproject.automaticelevatorsys;
 
-import static iiita.gproject.automaticelevatorsys.Initfinal.t;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
-import javax.swing.Timer;
 
 /**
  *

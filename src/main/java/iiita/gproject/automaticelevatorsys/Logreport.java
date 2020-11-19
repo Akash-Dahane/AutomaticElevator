@@ -6,9 +6,15 @@
 package iiita.gproject.automaticelevatorsys;
 
 import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,23 +25,34 @@ import java.util.regex.Pattern;
 public class Logreport extends javax.swing.JFrame {
     String regstart;
     String regend;
-    public Logreport(String Regstart, String Regend) {
-        regstart = Regstart;
+    public Logreport(String ftime, String ttime) {
+        DateFormat df= new SimpleDateFormat("MMM dd, yyyy h:mm:ss a");
+        Date ffd = null,ttd = null;
+        try{
+            ffd = df.parse(ftime);
+            //System.out.println(ffd);
+            ttd = df.parse(ttime);
+            //System.out.println(ttd);
+        }catch(ParseException e){
+            System.err.println(e);
+        }
+        //regstart = ftime;
         //System.out.println(regstart);
-        regend = Regend;
+        //regend = ttime;
+        String regx="(^.*AM)|(^.*PM)";
         initComponents();
         jTextArea3.setText("Sorry.No logs available for given timerange.\n");
         try{
             boolean flag =false;
-            FileInputStream fstream = new FileInputStream("logreports.log");
-            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            File f= new File("logreports.log");
+            BufferedReader br = new BufferedReader(new InputStreamReader(new DataInputStream(new FileInputStream(f))));
             String line;
             while((line = br.readLine()) != null){
                 //jTextArea3.append(line+"\n");
-                if(filtertest(regend,line))
+                if(filtertest(regx,line,ttd))
 		    break; // break if we get end time and thus stop displaying.
                 if(flag==false){
-		    if(filtertest(regstart,line)){
+		    if(filtertest(regx,line,ffd)){
 			flag=true; // flag set because we don't want to check start anymore now
 			jTextArea3.append(line+"\n");
 		    }
@@ -45,7 +62,7 @@ public class Logreport extends javax.swing.JFrame {
                 }
 
             }
-            fstream.close();
+            br.close();
         }
         catch ( Exception e){
             System.err.println(e.getLocalizedMessage());
@@ -215,12 +232,39 @@ public class Logreport extends javax.swing.JFrame {
      *
      * @param regx
      * @param line
+     * @param ffd
      * @return
      */
-    public static boolean filtertest(String regx, String line){
+    public static boolean filtertest(String regx, String line, Date ffd){
+               //System.out.println("i was called"+ffd);
 	       Pattern pt = Pattern.compile(regx);
-	       Matcher mt = pt.matcher(line);
-	       return mt.find();
+               Matcher mt = pt.matcher(line);
+               DateFormat df = new SimpleDateFormat("MMM dd, yyyy h:mm:ss a");
+               String x =null;
+               Date test = null;
+               if(mt.find()){
+                    x=mt.group();
+                    //System.out.println("this happened");
+
+               }
+               if(x!=null){
+                    try{
+                        test=df.parse(x);
+                        //System.out.println(test);
+                   
+                    }
+                    catch(ParseException e){
+                        System.err.println(e);
+                    }
+                    if((test.compareTo(ffd)==0)||(test.compareTo(ffd)>0)){
+                        //ystem.out.println(test);
+                        return true;
+                    }
+                    else
+                        return false;
+               }
+               return false;
+
        }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

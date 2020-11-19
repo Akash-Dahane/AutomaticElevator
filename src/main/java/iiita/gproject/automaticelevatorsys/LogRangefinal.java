@@ -201,7 +201,8 @@ public class LogRangefinal extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
+        setLocation(new java.awt.Point(800, 1000));
+        //setLocationRelativeTo(null);
     }// </editor-fold>                        
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
@@ -226,8 +227,8 @@ public class LogRangefinal extends javax.swing.JFrame {
             String tl = Tolist.getSelectedItem().toString();
             String startreg= fh+":"+".*"+":"+".*"+fl;
             String endreg= th+":"+".*"+":"+".*"+tl;
-            new Logreport(startreg,endreg).setVisible(true);
-            this.dispose();
+            //new Logreport(startreg,endreg).setVisible(true);
+            //this.dispose();
         }
         
 
