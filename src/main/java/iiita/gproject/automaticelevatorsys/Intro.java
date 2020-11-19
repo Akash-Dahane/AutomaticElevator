@@ -7,6 +7,12 @@ package iiita.gproject.automaticelevatorsys;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -21,8 +27,33 @@ public class Intro extends javax.swing.JFrame {
      */
     public Intro() {
         initComponents();
+        File file = new File("emailinfofile");
+         if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException ex) {
+                Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         } 
+        BufferedWriter bf = null;
+        try {
+            bf = new BufferedWriter(new FileWriter(file));
+        } catch (IOException ex) {
+            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            bf.write("iit2019170@iiita.ac.in");
+        } catch (IOException ex) {
+            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            bf.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         ActionListener taskPerformer = new ActionListener() {
+            
             public void actionPerformed(ActionEvent evt) {
                  f.dispose();
                  new gotcha().setVisible(true);
@@ -60,7 +91,7 @@ public class Intro extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Palatino", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("ACE Systems");
+        jLabel4.setText("AEC System");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

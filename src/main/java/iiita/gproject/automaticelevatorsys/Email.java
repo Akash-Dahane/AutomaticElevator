@@ -15,6 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.mail.*;
 import javax.mail.internet.*;
+import javax.swing.JOptionPane;
 //import javax.mail.*;
 //import javax.mail.internet.AddressException;
 //import javax.mail.internet.InternetAddress;
@@ -31,7 +32,7 @@ public class Email {
     }
     public static void emailer(String recpt) {
         // TODO code application logic here
-        System.out.println(recpt);
+        //System.out.println(recpt);
         Properties properties = new Properties();
         properties.put("mail.smtp.auth","true");
         properties.put("mail.smtp.starttls.enable","true");
@@ -58,7 +59,9 @@ public class Email {
             Transport.send(message);
             //System.out.println("yup");
         } catch (MessagingException ex) {
-            Logger.getLogger(Email.class.getName()).log(Level.SEVERE, null, ex);
+            //System.out.println("Network connection error for email");
+            JOptionPane.showMessageDialog(null, "Please ckeck your internet connection to \nrun email services.");
+            //Logger.getLogger(Email.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

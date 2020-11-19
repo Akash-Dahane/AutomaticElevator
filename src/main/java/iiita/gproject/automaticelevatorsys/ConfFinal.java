@@ -565,15 +565,12 @@ public class ConfFinal extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(imageIcon);
         jLabel11.setText("Admin email :");
-        File f = new File("emailfile");
+        File f = new File("emailinfofile");
         /*if(f.exists() == false){
             f.createNewFile();
             
         }
-        BufferedWriter bf = null;
-        bf = new BufferedWriter(new FileWriter(f));
-        bf.write("x");
-        bf.close();*/
+        */
         BufferedReader cr = null;
         try {
             cr = new BufferedReader(new InputStreamReader(new DataInputStream(new FileInputStream(f))));
@@ -724,7 +721,7 @@ public class ConfFinal extends javax.swing.JFrame {
         
         try {
          String id= jFormattedTextField1.getText();
-         File file = new File("emailfile");
+         File file = new File("emailinfofile");
          if (!file.exists()) {
             file.createNewFile();
          } 
