@@ -180,8 +180,7 @@ public class gotcha extends javax.swing.JFrame {
             .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pack();
-        //setLocationRelativeTo(null);
-        setLocation(new java.awt.Point(800, 0));
+        setLocationRelativeTo(null);
     }// </editor-fold>   
     Initfinal init;
     LogDemo log;

@@ -314,7 +314,8 @@ public class Initfinal extends javax.swing.JFrame {
         );
 
         pack();
-        setLocation(new java.awt.Point(0, 500));
+        //setLocation(new java.awt.Point(0, 500));
+        setLocationRelativeTo(null);
         try{
             LogManager lm = LogManager.getLogManager();
             String LoggerName = Logger.GLOBAL_LOGGER_NAME;
@@ -322,7 +323,7 @@ public class Initfinal extends javax.swing.JFrame {
             logrep.setLevel(Level.INFO);
             logrep.setUseParentHandlers(false);
 
-            FileHandler fh = new FileHandler("logreports.log",0,1,true);
+            FileHandler fh = new FileHandler("LogReports.log",0,1,true);
             fh.setFormatter(new SimpleFormatter());
             fh.setLevel(Level.INFO);
             logrep.addHandler(fh);
