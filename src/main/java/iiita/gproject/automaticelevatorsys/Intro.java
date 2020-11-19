@@ -60,7 +60,7 @@ public class Intro extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Palatino", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("ACE Systems");
+        jLabel4.setText("AEC System");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
