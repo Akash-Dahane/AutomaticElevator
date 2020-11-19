@@ -22,7 +22,7 @@ import javax.mail.MessagingException;
  */
 public class SendEmail {
     public SendEmail(){
-         File f = new File("emailfile");
+         File f = new File("emailinfofile");
         /*if(f.exists() == false){
             f.createNewFile();
             
