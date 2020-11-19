@@ -50,7 +50,6 @@ public class Numfinal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        setLocation(new java.awt.Point(600, 550));
         
         int enterVar = new Random().nextInt(5);
         int exitVar = new Random().nextInt(5);
@@ -169,7 +168,6 @@ public class Numfinal extends javax.swing.JFrame {
         );
 
         pack();
-        //setLocationRelativeTo(null);
     }// </editor-fold>                        
 
     /**

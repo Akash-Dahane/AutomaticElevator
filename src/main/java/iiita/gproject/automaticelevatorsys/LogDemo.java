@@ -345,13 +345,12 @@ public class LogDemo extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "From time should be smaller than To time.");
         }
         else{
-            new Logreport(ftime,ttime).setVisible(true);
+            new LogReport(ftime,ttime).setVisible(true);
             this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 }
-    
-    
+
     /**
      * @param args the command line arguments
      */
@@ -381,11 +380,6 @@ public class LogDemo extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LogDemo().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
