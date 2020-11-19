@@ -30,15 +30,13 @@ public class LogReport extends javax.swing.JFrame {
         Date ffd = null,ttd = null;
         try{
             ffd = df.parse(ftime);
-            //System.out.println(ffd);
+           
             ttd = df.parse(ttime);
-            //System.out.println(ttd);
+            
         }catch(ParseException e){
             System.err.println(e);
         }
-        //regstart = ftime;
-        //System.out.println(regstart);
-        //regend = ttime;
+        
         String regx="(^.*AM)|(^.*PM)";
         initComponents();
         jTextArea3.setText("Sorry.No logs available for given timerange.\n");
@@ -136,7 +134,7 @@ public class LogReport extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Remove Time Filter");
+        jButton3.setText("Display All logs");
         jButton3.setBorderPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -307,41 +305,7 @@ public class LogReport extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(LogReport.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        /*
-        try{
-        FileInputStream fstream = new FileInputStream("LogReports.log");
-        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-        String strLine;
-        while((strLine = br.readLine()) != null){
-        System.out.println(strLine);
-        }
-        fstream.close();
-        }
-        catch ( IOException e){
-        System.err.println(e.getLocalizedMessage());
-        }
-         */
-        //</editor-fold>
-        /*
-        try{
-            FileInputStream fstream = new FileInputStream("LogReports.log");
-            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-            String strLine;
-            while((strLine = br.readLine()) != null){
-                System.out.println(strLine);
-            }
-            fstream.close();
-            
-        }
-        catch ( IOException e){
-            System.err.println(e.getLocalizedMessage());
-        }
-        */
-         
-        /* Create and display the form */
-        /*java.awt.EventQueue.invokeLater(() -> {
-            new LogReport().setVisible(true);
-        });*/
+       
         
     }
 

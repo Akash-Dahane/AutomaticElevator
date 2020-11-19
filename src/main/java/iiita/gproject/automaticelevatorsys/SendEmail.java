@@ -23,14 +23,7 @@ import javax.mail.MessagingException;
 public class SendEmail {
     public SendEmail(){
          File f = new File("emailfile");
-        /*if(f.exists() == false){
-            f.createNewFile();
-            
-        }
-        BufferedWriter bf = null;
-        bf = new BufferedWriter(new FileWriter(f));
-        bf.write("x");
-        bf.close();*/
+        
         BufferedReader cr = null;
         try {
             cr = new BufferedReader(new InputStreamReader(new DataInputStream(new FileInputStream(f))));
