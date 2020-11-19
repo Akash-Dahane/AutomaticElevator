@@ -238,9 +238,7 @@ public class Initfinal extends javax.swing.JFrame {
         statLabel.setForeground(new java.awt.Color(0, 102, 102));
         statLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         statLabel.setText(overallStatus[idx]);
-        if("Power Drop".equals(statLabel.getText())){
-            SendEmail sendEmail = new SendEmail();
-        }
+        
 
         jButton1.setText("Quit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -316,7 +314,7 @@ public class Initfinal extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
+        setLocation(new java.awt.Point(0, 500));
         try{
             LogManager lm = LogManager.getLogManager();
             String LoggerName = Logger.GLOBAL_LOGGER_NAME;
@@ -331,6 +329,9 @@ public class Initfinal extends javax.swing.JFrame {
             logrep.log(Level.INFO, "\nWeight in lift:{0}\nNumber of people:{1}\nFloor no:{2}\nOverall Status:{3}", new Object[]{wt, n, f, statLabel.getText()});
             fh.flush();
             fh.close();
+            if("Power Drop".equals(statLabel.getText())){
+                SendEmail sendEmail = new SendEmail();
+            }
         }
         catch(IOException e){
             System.err.println(e);
