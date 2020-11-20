@@ -57,6 +57,7 @@ public class Email {
         }
         try {
             Transport.send(message);
+            JOptionPane.showMessageDialog(null, "email Sent to admin to notify Power Drop\nConfirm to resume.");
             //System.out.println("yup");
         } catch (MessagingException ex) {
             //System.out.println("Network connection error for email");
