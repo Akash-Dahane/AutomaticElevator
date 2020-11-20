@@ -333,6 +333,9 @@ public class Initfinal extends javax.swing.JFrame {
             if("Power Drop".equals(statLabel.getText())){
                 SendEmail sendEmail = new SendEmail();
             }
+            if("Lift Capacity Exceeded".equals(statLabel.getText())){
+                jPanel2.setBackground(new java.awt.Color(255,51,51));
+            }
         }
         catch(IOException e){
             System.err.println(e);
