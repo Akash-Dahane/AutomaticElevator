@@ -1,15 +1,7 @@
 # Automatic Elevator Control System
-
-Submission by: 
-
-Group ID: 19
-Arun Kumar      [IIT2019166]
-Ansh Verma      [IIT2019167]
-Jay Pal         [IIT2019170]
-Akash Dahane    [IIT2019176]
-
+# For Object oriented programming Course
 Project Specifications:
---> Main Project jar(Executable) file: AutomaticElevatorSys-1.0-SNAPSHOT-jar-with-dependencies.jar  .
+--> Main Project jar(Executable) file: AutomaticElevatorSys-1.0-SNAPSHOT-jar-with-dependencies.jar  
 --> Project Main Class: Intro.java.
 
 --> Two external jars: mail.jar and activation.jar used for activating the mail service. They are already built in the main jar file.
@@ -18,7 +10,9 @@ Project Specifications:
 --> No database is used, log has been generated using java Logger class.
 
 Instructions to use:
+
 --> Unzip the zip file.
+--> Requires JRE 11 
 --> Run the executable jar file: java -jar AutomaticElevatorSys-1.0-SNAPSHOT-jar-with-dependencies.jar.
 --> Application will launch and further instructions to use the application can be found in the 
 report file: ProjectReport.pdf
